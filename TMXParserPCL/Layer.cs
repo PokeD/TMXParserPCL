@@ -1,22 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace TmxMapperPCL
+namespace TMXParserPCL
 {
-    public class ObjectGroup
+    public class Layer
     {
+
         [XmlAttribute(DataType="string", AttributeName="name")]
         public string Name { get; set; }
 
-        [XmlAttribute(DataType = "string", AttributeName = "color")]
-        public string Color { get; set; }
+        /*
+        [XmlAttribute(DataType="int", AttributeName="x")]
+        public int X { get; set; }
+        
+        [XmlAttribute(DataType="int", AttributeName="y")]
+        public int Y { get; set; }
+        */
 
-        [Obsolete]
+        //[Obsolete]
         [XmlAttribute(DataType = "int", AttributeName = "width")]
         public int Width { get; set; }
 
-        [Obsolete]
+        //[Obsolete]
         [XmlAttribute(DataType = "int", AttributeName = "height")]
         public int Height { get; set; }
 
@@ -34,23 +39,12 @@ namespace TmxMapperPCL
         [XmlAttribute(DataType = "int", AttributeName = "offsety")]
         public int OffsetY { get; set; }
 
-        [XmlAttribute(AttributeName = "draworder")]
-        public DrawOrder DrawOrder { get; set; }
-
 
 
         [XmlElement(ElementName = "properties")]
         public List<Property> Properties { get; set; }
 
-        [XmlElement(ElementName = "object")]
-        public List<Object> Objects { get; set; }     
-    }
-
-    public enum DrawOrder
-    {
-        [XmlEnum(Name = "topdown")]
-        Topdown = 1,
-        [XmlEnum(Name = "index")]
-        Index = 2
+        [XmlElement(ElementName = "data")]
+        public Data Data { get; set; }
     }
 }

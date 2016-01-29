@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Xml.Serialization;
 
-namespace TmxMapperPCL
+namespace TMXParserPCL
 {
     [XmlRoot(DataType="string", ElementName="map")]
     public class Map

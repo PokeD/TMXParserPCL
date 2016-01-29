@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace TmxMapperPCL
+namespace TMXParserPCL
 {     
     public class Property
     {

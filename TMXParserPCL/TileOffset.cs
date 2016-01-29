@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace TmxMapperPCL
+namespace TMXParserPCL
 {
     [XmlRoot(ElementName="tileoffset")]
     public class TileOffset

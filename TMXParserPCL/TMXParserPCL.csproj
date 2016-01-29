@@ -8,9 +8,8 @@
     <ProjectGuid>{4A44A56A-8C6C-440A-9DD5-73AC7CD5B8F6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TmxMapperPCL</RootNamespace>
-    <AssemblyName>TmxMapperPCL</AssemblyName>
-    <DefaultLanguage>en-US</DefaultLanguage>
+    <RootNamespace>TMXParserPCL</RootNamespace>
+    <AssemblyName>TMXParserPCL</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
@@ -55,15 +54,4 @@
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
-  <Target Name="AfterBuild">
-    <Copy Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' " SourceFiles="$(TargetPath)" ContinueOnError="true" DestinationFolder="$(SolutionDir)Nuget\lib\portable-netcore451+wpa81\" />
-    <Exec WorkingDirectory="$(SolutionDir)Nuget\" Command="%22C:\Program Files (x86)\NuGet\NuGet.exe%22 pack TmxMapperPCL.nuspec" />
-  </Target>
 </Project>

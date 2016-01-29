@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 using ICSharpCode.SharpZipLib.GZip;
 using ICSharpCode.SharpZipLib.Zip.Compression.Streams;
 
-namespace TmxMapperPCL
+namespace TMXParserPCL
 {
     public class Data
     {
