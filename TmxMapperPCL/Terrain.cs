@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Xml.Serialization;
 
 namespace TmxMapperPCL
@@ -13,10 +9,11 @@ namespace TmxMapperPCL
         public string Name { get; set; }
 
         [XmlAttribute(DataType = "string", AttributeName = "tile")]
-        public string TileId { get; set; }
+        public string Title { get; set; }
 
-        [XmlArray("properties")]
-        [XmlArrayItem("property")]
+
+
+        [XmlElement(ElementName = "properties")]
         public List<Property> Properties { get; set; }    
     }
 }
