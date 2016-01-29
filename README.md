@@ -1,5 +1,5 @@
 # PCL Tiled Map File Parser 
-Tmx-Mapper-PCL is C# library for parsing Tiled Map's TMX files.
+TMXParserPCL is C# library for parsing Tiled Map's TMX files.
 
 ## Usage:
 ```csharp
