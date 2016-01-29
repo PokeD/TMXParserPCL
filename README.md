@@ -17,13 +17,10 @@ foreach (var tileSet in map.TileSets)
   // -- Load a file how you want in PCL
   var fileStream = File.Open(tileSet.Source, FileMode.Open);
   
-  var firstGID = tileSet.FirstGID;
-  var serializer = new XmlSerializer(typeof(TileSet));
-  var tileSetLoaded = (TileSet) serializer.Deserialize(fileStream);
-  tileSetLoaded.FirstGID = firstGID;
+  var tileSetLoaded = TileSet.LoadExternal(fileStream, tileSet);
 
   // -- Load a file how you want in PCL
-  var pictureStream = File.Open(tileSet.Image.Source, FileMode.Open);
+  var pictureStream = File.Open(tileSetLoaded.Image.Source, FileMode.Open);
   var picture = new Bitmap(pictureStream);
   loadedImages.Add(picture);
 
