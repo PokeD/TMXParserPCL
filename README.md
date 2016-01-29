@@ -30,3 +30,5 @@ foreach (var tileSet in map.TileSets)
   loadedExternalTileSets.Add(tileSetLoaded);
 }
 ```
+
+There isn't really an other way to load external TileSets, it's needed to be serialized second time
