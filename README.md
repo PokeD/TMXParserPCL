@@ -1,6 +1,8 @@
 # PCL Tiled Map File Parser 
 TMXParserPCL is C# library for parsing Tiled Map's TMX files.
 
+[![nugetpkg](https://img.shields.io/badge/nuget-TMXParserPCL-orange.svg)](https://www.nuget.org/packages/TMXParserPCL/)
+
 ## Usage:
 ```csharp
 // -- Load a file how you want in PCL
